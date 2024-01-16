@@ -1,76 +1,43 @@
-0x00. AirBnB clone - The console
-0x00.Table of contents
-0x01 Introduction
-0x02 Environment
-0x03 Installation
-0x04 Testing
-0x05 Usage
-0x06 Authors
-0x01 Introduction
-Team project to build a clone of AirBnB.
+Welcome to the AirBnB clone project!
+Before starting, please read the AirBnB concept page.
 
-The console is a command interpreter to manage objects abstraction between objects and how they are stored.
+First step: Write a command interpreter to manage your AirBnB objects.
+This is the first step towards building your first full web application: the AirBnB clone. This first step is very important because you will use what you build during this project with all other following projects: HTML/CSS templating, database storage, API, front-end integration…
 
-To see the fundamental background of the project visit the Wiki.
+Each task is linked and will help you to:
 
-The console will perform the following tasks:
-
-create a new object
-retrive an object from a file
-do operations on objects
-destroy an object
-Storage
-All the classes are handled by the Storage engine in the FileStorage Class.
-
-0x02 Environment
-Suite CRM terminal python Suite CRM Suite CRM git distributed version control system Github
-
-Execution
-In interactive mode
-
-$ ./console.py
-(hbnb) help
-
-Documented commands (type help <topic>):
-========================================
-EOF  help  quit
-
-(hbnb)
-(hbnb)
-(hbnb) quit
-$
-in Non-interactive mode
-
-$ echo "help" | ./console.py
-(hbnb)
-
-Documented commands (type help <topic>):
-========================================
-EOF  help  quit
-(hbnb)
-$
-$ cat test_help
-help
-$
-$ cat test_help | ./console.py
-(hbnb)
-
-Documented commands (type help <topic>):
-========================================
-EOF  help  quit
-(hbnb)
-$
-0x04 Testing
-All the test are defined in the tests folder.
-
-Documentation
-Modules:
-python3 -c 'print(__import__("my_module").__doc__)'
-Classes:
-python3 -c 'print(__import__("my_module").MyClass.__doc__)'
-Functions (inside and outside a class):
-python3 -c 'print(__import__("my_module").my_function.__doc__)'
-and
-
-python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'
-
+put in place a parent class (called BaseModel) to take care of the initialization, serialization and deserialization of your future instances
+create a simple flow of serialization/deserialization: Instance <-> Dictionary <-> JSON string <-> file
+create all classes used for AirBnB (User, State, City, Place…) that inherit from BaseModel
+create the first abstracted storage engine of the project: File storage.
+create all unittests to validate all our classes and storage engine
+Requirements
+Python Scripts
+Allowed editors: vi, vim, emacs
+All your files will be interpreted/compiled on Ubuntu 20.04 LTS using python3 (version 3.8.5)
+All your files should end with a new line
+The first line of all your files should be exactly #!/usr/bin/python3
+A README.md file, at the root of the folder of the project, is mandatory
+Your code should use the pycodestyle (version 2.8.*)
+All your files must be executable
+The length of your files will be tested using wc
+All your modules should have a documentation (python3 -c 'print(__import__("my_module").__doc__)')
+All your classes should have a documentation (python3 -c 'print(__import__("my_module").MyClass.__doc__)')
+All your functions (inside and outside a class) should have a documentation (python3 -c 'print(__import__("my_module").my_function.__doc__)' and python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)')
+A documentation is not a simple word, it’s a real sentence explaining what’s the purpose of the module, class or method (the length of it will be verified)
+Python Unit Tests
+Allowed editors: vi, vim, emacs
+All your files should end with a new line
+All your test files should be inside a folder tests
+You have to use the unittest module
+All your test files should be python files (extension: .py)
+All your test files and folders should start by test_
+Your file organization in the tests folder should be the same as your project
+e.g., For models/base_model.py, unit tests must be in: tests/test_models/test_base_model.py
+e.g., For models/user.py, unit tests must be in: tests/test_models/test_user.py
+All your tests should be executed by using this command: python3 -m unittest discover tests
+You can also test file by file by using this command: python3 -m unittest tests/test_models/test_base_model.py
+All your modules should have a documentation (python3 -c 'print(__import__("my_module").__doc__)')
+All your classes should have a documentation (python3 -c 'print(__import__("my_module").MyClass.__doc__)')
+All your functions (inside and outside a class) should have a documentation (python3 -c 'print(__import__("my_module").my_function.__doc__)' and python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)')
+We strongly encourage you to work together on test cases, so that you don’t miss any edge case
